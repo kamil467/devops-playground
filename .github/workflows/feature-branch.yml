@@ -29,3 +29,5 @@ jobs:
      - name: Test Step
        run: |
          echo "I am getting called"
+         echo ${{ github.event_name }}
+         echo  ${{ github.ref_type }}
