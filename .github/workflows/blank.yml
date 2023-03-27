@@ -18,6 +18,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2.7.0
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.2
       - name: Install newman
@@ -29,4 +31,4 @@ jobs:
         
       - name: Run POSTMAN collection
         run: |
-          newman run ./.test/api.json  -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html   
+          newman run ./test/api.json  -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html   
