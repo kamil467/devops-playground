@@ -5,10 +5,10 @@ name: Feature Branch Push
 
 # Controls when the workflow will run
 on: 
-  push:
-    branches: 
+   push:
+       branches: 
        - 'feature/**'
- 
+   workflow_dispatch:
 
   
   # Triggers the workflow on push or pull request events but only for the "main" branch
