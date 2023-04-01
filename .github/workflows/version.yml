@@ -8,7 +8,7 @@ jobs:
   steps:
      - name: Update Version Number
        run: |
-        $version=(Get-Item -Path .version.txt | Get-Content -First 1)
+        $version=(Get-Item -Path .\.version.txt | Get-Content -First 1)
         $version
         $splitVersion = $version.split('.')
         echo $splitVersion
