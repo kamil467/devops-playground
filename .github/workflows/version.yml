@@ -31,7 +31,10 @@ jobs:
         $Set-Content -Path version.txt -Value $filecontent
        shell: pwsh
        
-      - name: Commit Patch Version
-        run:
-        
+     - name: Commit Patch Version
+       run: |
+         git config --global user.name "kamil hussain"
+         git config --global user.email "youremail@yourdomain.com"
+         git commit -m "My commit message"
+         git push
   
