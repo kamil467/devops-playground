@@ -11,9 +11,10 @@ jobs:
   steps:
      - name: Update release number
        run: |
-        $ver=[integer]${{vars.BUILD_VERSION}}
-        $ver = $ver+1
-        $env:GITHUB_ENV=$ver
+        $ver=${{vars.BUILD_VERSION}}
+        $versionNumber=[int]$ver
+        $versionNumber = $versionNumber+1
+        $env:GITHUB_ENV=$versionNumber
         echo $ver
         sh:pwsh
      - name: Checkout
