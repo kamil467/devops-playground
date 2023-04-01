@@ -1,5 +1,5 @@
 name: Version Test
-run-name: Release Version -  ${{vars.BUILD_VERSION}}
+run-name: Release Version -  ${{GITHUB_RUN_NUMBER}}
 on:
  workflow_dispatch:
 
@@ -9,17 +9,7 @@ jobs:
   runs-on: ubuntu-latest
   
   steps:
-     - name: GitHub objec
-       run: |
-        echo ${{github}}
-     - name: Update release number
-       run: |
-        $ver=${{vars.BUILD_VERSION}}
-        $versionNumber=[int]$ver
-        $versionNumber = $versionNumber+1
-        $env:BUILD_VERSION=$versionNumber
-        echo $ver
-        sh:pwsh
+
      - name: Checkout
        uses: actions/checkout@v3
        with:
