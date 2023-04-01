@@ -15,9 +15,13 @@ jobs:
        
      - name: Update Version Number
        run: |
-        $version=(Get-Item -Path version.txt | Get-Content -First 1)
-        $version
-        $splitVersion = $version.split('.')
-        echo $splitVersion
+        $majorversion=(Get-Item -Path version.txt | Get-Content -First 1)
+        echo $majorversion
+        $minorVersion=(Get-Item -Path version.txt | Get-Content -TotalCount 2)[-1]
+        echo $minorVersion
+        $patch=(Get-Item -Path version.txt | Get-Content -Tail 1)
+        echo $patch
+        $patchNumber = $patch.split('=')[2]
+        echo $patchNumber
        shell: pwsh
   
