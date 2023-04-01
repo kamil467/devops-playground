@@ -35,8 +35,8 @@ jobs:
        
      - name: Commit Patch Version
        run: |
+         git pull origin main
          git add version.txt
-         git pull
          git config --global user.name "kamil hussain"
          git config --global user.email "youremail@yourdomain.com"
          git commit -m "My commit message"
