@@ -5,8 +5,12 @@ on:
 jobs:
  updateversionnumber:
  runs-on: ubuntu-latest
-   steps:
+ steps:
      -name: Update Version Number
-      run : |
-        
+      run: |
+        $version=(Get-Item -Path .version.txt | Get-Content -First 1)
+        $version
+        $splitVersion = $version.split('.')
+        echo $splitVersion
+      shell: pwsh
   
