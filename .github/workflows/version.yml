@@ -33,6 +33,7 @@ jobs:
        
      - name: Commit Patch Version
        run: |
+         git add version.txt
          git config --global user.name "kamil hussain"
          git config --global user.email "youremail@yourdomain.com"
          git commit -m "My commit message"
