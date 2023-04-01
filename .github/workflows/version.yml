@@ -43,6 +43,14 @@ jobs:
        run: |
         Compress-Archive -LiteralPath . -DestinationPath repo.zip
        shell: pwsh
+     - name: Upload a Build Artifact
+       uses: actions/upload-artifact@v3.1.2
+       with:
+    # Artifact name
+         name: repo.zip
+    # A file, directory or wildcard pattern that describes what to upload
+         path: repo.zip
+
     
      - name: list of files
        run: |
