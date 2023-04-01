@@ -10,7 +10,7 @@ jobs:
        uses: actions/checkout@v2.7.0
      - name: list of files
        run: |
-        echo get-childitem -path .
+        echo get-childitem -path
        shell: pwsh
        
      - name: Update Version Number
