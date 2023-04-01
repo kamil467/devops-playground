@@ -26,7 +26,7 @@ jobs:
         echo $patchNumber[1]
         $patchVersionInt =[int]$patchNumber[1]
         echo $patchVersionInt
-        $patchVersion = $patchVersionInt[1]+1
+        $patchVersion = $patchVersionInt+1
         $filecontent = Get-Content -Path version.txt
         $filecontent[2]= "PATCH="+$patchVersion
         Set-Content -Path version.txt -Value $filecontent
