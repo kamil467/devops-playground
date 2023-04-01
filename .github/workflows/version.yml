@@ -26,6 +26,12 @@ jobs:
         echo $patchNumber[1]
         echo $patchNumber[2]
         $patchVersion = $patchNumber[2]+1
-        echo $ $patchVersion
+        $filecontent = Get-Content -Path version.txt
+        $filecontent[2]= 'PATCH='+$patchVersion
+        $Set-Content -Path version.txt -Value $filecontent
        shell: pwsh
+       
+      - name: Commit Patch Version
+        run:
+        
   
