@@ -21,7 +21,10 @@ jobs:
         echo $minorVersion
         $patch=(Get-Item -Path version.txt | Get-Content -Tail 1)
         echo $patch
-        $patchNumber = $patch.split('=')[2]
+        $patchNumber = $patch.split("=")
+        echo $patchNumber[0]
+        echo $patchNumber[1]
+        echo $patchNumber[2]
         echo $patchNumber
        shell: pwsh
   
