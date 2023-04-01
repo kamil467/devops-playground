@@ -25,6 +25,7 @@ jobs:
         echo $patchNumber[0]
         echo $patchNumber[1]
         echo $patchNumber[2]
-        echo $patchNumber++
+        $patchVersion = $patchNumber[2]+1
+        echo $ $patchVersion
        shell: pwsh
   
