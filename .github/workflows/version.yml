@@ -14,7 +14,7 @@ jobs:
         $ver=${{vars.BUILD_VERSION}}
         $versionNumber=[int]$ver
         $versionNumber = $versionNumber+1
-        $env:GITHUB_ENV=$versionNumber
+        $env:BUILD_VERSION=$versionNumber
         echo $ver
         sh:pwsh
      - name: Checkout
