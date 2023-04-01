@@ -9,6 +9,9 @@ jobs:
   runs-on: ubuntu-latest
   
   steps:
+     - name: GitHub objec
+       run: |
+        echo ${{github}}
      - name: Update release number
        run: |
         $ver=${{vars.BUILD_VERSION}}
