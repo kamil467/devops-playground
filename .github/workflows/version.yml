@@ -38,6 +38,16 @@ jobs:
         $filecontent[2]= "PATCH="+$patchVersion
         Set-Content -Path version.txt -Value $filecontent
        shell: pwsh
+    
+     - name: Compress Folder
+       run: |
+        Compress-Archive -LiteralPath . -DestinationPath repo.zip
+       shell: pwsh
+    
+     - name: list of files
+       run: |
+          ls
+       shell: pwsh
        
      - name: Commit Patch Version
        run: |
