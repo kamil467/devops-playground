@@ -11,7 +11,7 @@ jobs:
   steps:
      - name: Update release number
        run: |
-        $ver=[int]${{vars.BUILD_VERSION}}
+        $ver=[integer]${{vars.BUILD_VERSION}}
         $ver = $ver+1
         $env:GITHUB_ENV=$ver
         echo $ver
