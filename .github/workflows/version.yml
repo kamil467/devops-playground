@@ -1,5 +1,5 @@
 name: Version Test
-run-name: Release Version -  ${{GITHUB_RUN_NUMBER}}
+run-name: Release Version -  ${{github.run_number}}
 on:
  workflow_dispatch:
 
