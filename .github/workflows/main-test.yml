@@ -1,0 +1,15 @@
+name: Build and Deploy Main Branch
+on:
+ workflow_call:
+  inputs:
+    version:
+        type: string
+        required: true
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     
+     steps:
+         - name: test run
+           run : |
+              echo ${{inputs.version}}
