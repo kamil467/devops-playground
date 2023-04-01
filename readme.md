@@ -15,3 +15,7 @@
        - Create a new feature branch off the main branch to port the changes.
        - Cherry-pick the changes from the release branch to your new feature branch.
        - Merge the feature branch back into the main branch in a second pull request.
+       
+ #### Tags for release
+  - If we use separate branches for release then tags are not neccessary.
+  - 
