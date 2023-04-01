@@ -19,3 +19,9 @@
  #### Tags for release
   - If we use separate branches for release then tags are not neccessary.
   - 
+
+#### Update Workflow Run Name:
+- Link : https://github.blog/changelog/2022-09-26-github-actions-dynamic-names-for-workflow-runs/
+- It will be easier if we follow comman naming pattern for work flow run
+-  Naming Convention would be Release-{incremental}
+-  Also it is easy to promote specific release to deployment when required
