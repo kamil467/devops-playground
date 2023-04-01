@@ -1,5 +1,5 @@
 name: Version Test
-run-name: Release Version - (( ${{vars.BUILD_VERSION}}++ ))
+run-name: Release Version -  $(( ${{vars.BUILD_VERSION}} ))++
 on:
  workflow_dispatch:
 
