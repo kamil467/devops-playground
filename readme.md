@@ -25,3 +25,11 @@
 - It will be easier if we follow comman naming pattern for work flow run
 -  Naming Convention would be Release-{incremental}
 -  Also it is easy to promote specific release to deployment when required
+
+####  Version :
+- .version file should keep in repo
+- Version= {MAJOR, MINOR, PATCH/BUILD}
+- whenever new build triggered for main branch from pull request , this should increase the build OR patch number
+- feature level changes - we should increase the minor version
+- breaking changes - it will be incremental of Major version
+- run-name for workflow can follow version number of application
