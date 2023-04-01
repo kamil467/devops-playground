@@ -48,6 +48,7 @@ jobs:
          git push
          
  callmainworkflow:
+            needs:  updateversionnumber
             uses: kamil467/devops-playground/.github/workflows/main-test.yml@main
             with:
              version: 1.0.34
