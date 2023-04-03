@@ -27,7 +27,7 @@ jobs:
          npm install -g newman
          npm install -g newman-reporter-htmlextra
       - name: Make Directory for results
-        run: mkdir -p  testResults/${{github.run_number}}
+        run: mkdir -p  .test/${{github.run_number}}
         
       - name: Run POSTMAN collection
         run: |
