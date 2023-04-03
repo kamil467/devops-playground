@@ -32,6 +32,7 @@ jobs:
       - name: Run POSTMAN collection
         run: |
           newman run ./test/api.json  -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html   
+        shell: pwsh
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with: 
