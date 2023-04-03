@@ -35,7 +35,7 @@ jobs:
            
           newman run ./test/api.json  -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html   
            echo "running ps command"
-          Get-ChildItem -Path testResults -Recurse | Where-Object {$_.PSIsContainer} 
+           echo  Get-ChildItem -Path testResults -Recurse | Where-Object {$_.PSIsContainer} 
         shell: pwsh
       - name: Output the run Details
         uses: actions/upload-artifact@v2
