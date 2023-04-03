@@ -33,7 +33,7 @@ jobs:
         run: |
           ls
            
-          newman run ./test/api.json  -r htmlextra --reporter-htmlextra-export testResults/${{github.run_number}}/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/${{github.run_number}}/runreport1.html   
+          newman run ./test/api.json  -r htmlextra --reporter-htmlextra-export ./test/${{github.run_number}}/htmlreport.html --reporter-htmlextra-darkTheme  > ./test/${{github.run_number}}/runreport1.html   
            echo "running ps command"
            echo  Get-ChildItem -Path testResults -Recurse | Where-Object {$_.PSIsContainer -eq $false} 
         shell: pwsh
@@ -41,4 +41,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
          name: RunReports
-         path: testResults/${{github.run_number}}
+         path: ./test/${{github.run_number}}
