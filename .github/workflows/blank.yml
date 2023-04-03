@@ -27,11 +27,15 @@ jobs:
          npm install -g newman
          npm install -g newman-reporter-htmlextra
       - name: Make Directory for results
-        run: mkdir -p testResults
+        run: mkdir -p  testResults
         
       - name: Run POSTMAN collection
         run: |
+          ls
+           
           newman run ./test/api.json  -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html   
+           echo "running ps command"
+          Get-ChildItem -Path testResults -Recurse | Where-Object {$_.PSIsContainer} 
         shell: pwsh
       - name: Output the run Details
         uses: actions/upload-artifact@v2
