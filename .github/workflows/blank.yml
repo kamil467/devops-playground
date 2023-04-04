@@ -54,7 +54,7 @@ jobs:
          git pull origin main
          git add test/${{github.run_number}}
          git config --global user.name "kamil hussain"
-         git config --global user.email "youremail@yourdomain.com"
+         git config --global user.email "kamil467@gmail.com"
          git commit -m "My commit message"
          git push  
          
