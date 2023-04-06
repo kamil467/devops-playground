@@ -32,7 +32,7 @@ jobs:
       - name: Install newman
         run: | 
          npm install -g newman
-         npm install -g newman-reporter-htmlextra
+       #  npm install -g newman-reporter-htmlextra
       - name: Make Directory for results
         run: mkdir -p  test/${{github.run_number}}
         
