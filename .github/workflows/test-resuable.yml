@@ -3,13 +3,20 @@ on:
   workflow_dispatch:
 jobs:
    test-job:
-       runs-on: ubuntu-latest
+       runs-on: ubuntu-latest 
+       outputs:
+          output1: ${{ steps.j.oobid-1.outputs.test }}
+      
        steps:
            - name: Test action
+             id: jobid-1
              run: |
-              echo "hello world"
+              echo "test=kamil" >> "$GITHUB_OUTPUT"
               
               
    calling-reusbale-workflow:
+     needs: test-job
      uses: kamil467/devops-playground/.github/workflows/reusable.yml@main 
+     with:
+        config-value: ${{needs.test-job.outputs.output1}}
               
