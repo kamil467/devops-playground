@@ -9,3 +9,7 @@ jobs:
              run: |
               echo "hello world"
               
+              
+   calling-reusbale-workflow:
+     uses: kamil467/devops-playground/.github/workflows/reusable.yml@main 
+              
