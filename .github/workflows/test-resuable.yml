@@ -11,7 +11,7 @@ jobs:
            - name: Test action
              id: jobid-1
              run: |
-              echo "test=kamil" >> "$GITHUB_OUTPUT"
+              echo "test=${{secrets.TEST_SECRET}}" >> "$GITHUB_OUTPUT"
               
               
    calling-reusbale-workflow:
