@@ -1,10 +1,14 @@
 name: 'Reusable Workflow'
 on:
  workflow_call:
+   inputs:
+    config-value:
+       required: false
+       type: string
 jobs:
  reusable-job:
    runs-on: ubuntu-latest
    steps:
       - name: test-step
         run: |
-          echo "reusable workflow"
+          echo "reusable workflow: ${{inputs.config-value}}"
