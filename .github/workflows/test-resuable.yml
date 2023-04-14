@@ -5,7 +5,7 @@ jobs:
    test-job:
        runs-on: ubuntu-latest 
        outputs:
-          output1: ${{ steps.j.oobid-1.outputs.test }}
+          output1: ${{ steps.jobid-1.outputs.test }}
       
        steps:
            - name: Test action
