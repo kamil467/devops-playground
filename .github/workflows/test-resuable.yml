@@ -17,6 +17,8 @@ jobs:
    calling-reusbale-workflow:
      needs: test-job
      uses: kamil467/devops-playground/.github/workflows/reusable.yml@main 
-     with:
-        config-value: ${{needs.test-job.outputs.output1}}
+       
+     secrets:
+          config-value: ${{needs.test-job.outputs.output1}}
+        
               
