@@ -1,0 +1,11 @@
+name: Status Check
+on:
+ workflow_dispatch:
+jobs:
+ test:
+   name: testjob
+   runs-on: ubuntu-latest
+   steps:
+     - name: test step
+       run: |
+        echo "Hi Kamil"
