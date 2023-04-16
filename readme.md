@@ -4,7 +4,7 @@
  - features and bugs fixes should go as pull request via sperate branhces ( feature branches or topics)
  - Branch protection policies
  - Always update to date.
- - No Build errors
+ - No Build errors jhvhj
 
 #### Release Branch Strategy
  - Create release branch once branch is deployed in production or when it close to release verssion
