@@ -3,7 +3,7 @@
 #### Main Branch Startegy 
  - features and bugs fixes should go as pull request via sperate branhces ( feature branches or topics)
  - Branch protection policies
- - Always update to date.
+ - Always update to date. bxxbbfg
  - No Build errors
 
 #### Release Branch Strategy
