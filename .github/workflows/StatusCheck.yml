@@ -1,6 +1,8 @@
 name: Status Check
 on:
- workflow_dispatch:
+  pull_request:
+   branches:
+      - main
 jobs:
  test:
    name: testjob
