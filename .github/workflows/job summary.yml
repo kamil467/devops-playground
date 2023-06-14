@@ -24,6 +24,7 @@ jobs:
                path: report
                
            - name: Print report in Job summary
+             if: ${{always()}}
              run: cat report.html >> $GITHUB_STEP_SUMMARY
    
            
