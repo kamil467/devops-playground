@@ -1,0 +1,10 @@
+name: Test Job summary
+on:
+   workflow_dispatch:
+jobs:
+
+   job_1:
+      runs-on: ubuntu-latest
+      steps:
+           - name: Print Summary
+             run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
