@@ -15,13 +15,16 @@ jobs:
              run:  npm install -g newman-reporter-html
            - name: Run newman
              run: |
-                 newman run https://api.postman.com/collections/13985100-5b6aa617-8431-4d2d-ba50-b8ca11cf92ea?access_key=PMAT-01H2X6JG51DDK6YAE5AKC0GBV3  --reporters cli,html  --reporter-html-export report
+                 newman run https://api.postman.com/collections/13985100-5b6aa617-8431-4d2d-ba50-b8ca11cf92ea?access_key=PMAT-01H2X6JG51DDK6YAE5AKC0GBV3  --reporters cli,html  --reporter-html-export report.html
                   
            - name: Upload Report
              if: ${{ always() }}
              uses: actions/upload-artifact@v3.1.2
              with:
                path: report
+               
+           - name: Print report in Job summary
+             run: cat report.html >> $GITHUB_STEP_SUMMARY
    
            
    job_2:
