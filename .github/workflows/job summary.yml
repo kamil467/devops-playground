@@ -8,3 +8,10 @@ jobs:
       steps:
            - name: Print Summary
              run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
+             
+   job_2:
+     runs-on: ubuntu-latest
+     environment: Test
+     steps:
+         - name: Print Summary - Job 2
+           run: echo '### Second Job Summary 🚀' >> $GITHUB_STEP_SUMMARY
