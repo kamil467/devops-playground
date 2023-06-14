@@ -9,9 +9,14 @@ jobs:
            - name: Print Summary
              run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
              
-           - name: HTML Summary
-             run: echo '<html><body><div><a href="https://google.com">Test Link</a></div></body></html>' >> $GITHUB_STEP_SUMMARY
-             
+           - name: Install Newman
+             run: npm install -g newman
+           
+           - name: Run newman
+             run: |
+              newman run https://www.postman.com/collections/cb208e7e64056f5294e5
+           
+           
    job_2:
      runs-on: ubuntu-latest
      environment: Test
