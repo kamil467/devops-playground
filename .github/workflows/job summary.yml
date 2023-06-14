@@ -14,7 +14,7 @@ jobs:
            
            - name: Run newman
              run: |
-              newman run https://api.postman.com/collections/13985100-5b6aa617-8431-4d2d-ba50-b8ca11cf92ea?access_key=PMAT-01H2X6JG51DDK6YAE5AKC0GBV3 --reporters cli  >> $GITHUB_STEP_SUMMARY 
+              newman run https://api.postman.com/collections/13985100-5b6aa617-8431-4d2d-ba50-b8ca11cf92ea?access_key=PMAT-01H2X6JG51DDK6YAE5AKC0GBV3 --reporters cli  
    
            
    job_2:
