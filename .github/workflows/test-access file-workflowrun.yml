@@ -10,4 +10,4 @@ jobs:
         - run: ls -l test.md
         - run: Set-Content test.md "### Hello Kamil !"
           shell: pwsh
-        - run: cat test.md
+        - run: cat test.md >> $GITHUB_STEP_SUMMARY
