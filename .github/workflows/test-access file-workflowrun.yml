@@ -1,0 +1,13 @@
+name: Test workflow Run Access file
+on: 
+   workflow_dispatch:
+   
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - run: touch test.md
+        - run: ls -l test.md
+        - run: Set-Content test.md "### Hello Kamil !"
+          shell: pwsh
+        - run: cat test.md
