@@ -16,5 +16,6 @@ jobs:
              release-name: release1.0
         - name: Print Person file
           run: cat person.md >> $GITHUB_STEP_SUMMARY
-        
+        - name: Print Person file
+          run: cat person.md 
               
