@@ -12,6 +12,8 @@ jobs:
         - name: Hello world action step
           id: hello
           uses: kamil467/demo-github-action@main
+          with:
+             release-name: release1.0
         - name: Print Person file
           run: cat person.md >> $GITHUB_STEP_SUMMARY
         
