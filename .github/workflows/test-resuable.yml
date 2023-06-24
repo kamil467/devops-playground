@@ -4,21 +4,14 @@ on:
 jobs:
    test-job:
        runs-on: ubuntu-latest 
-       outputs:
-          output1: ${{ steps.jobid-1.outputs.test }}
-      
        steps:
-           - name: Test action
-             id: jobid-1
-             run: |
-              echo "test=${{secrets.TEST_SECRET}}" >> "$GITHUB_OUTPUT"
-              
-              
-   calling-reusbale-workflow:
-     needs: test-job
-     uses: kamil467/devops-playground/.github/workflows/reusable.yml@main 
-       
-     secrets:
-          config-value: ${{needs.test-job.outputs.output1}}
+        - name: Hello world action step
+          id: hello
+          uses: kamil467/demo-github-action@main
+          with:
+             who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+        - name: Get the output time
+          run: echo "The time was ${{ steps.hello.outputs.time }}"
         
               
