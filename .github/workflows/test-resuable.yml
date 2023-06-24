@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
 jobs:
    test-job:
+       permissions:
+          contents: read
+          id-token: write
        runs-on: ubuntu-latest 
        steps:
         - name: Hello world action step
