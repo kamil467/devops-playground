@@ -1,0 +1,22 @@
+name: 'GitHub Dotnet Action'
+run-name: .NET Action- ${{github.run_id}}
+on:   
+   workflow_dispatch:
+jobs:   
+     test-job:
+            runs-on: ubuntu-latest
+            steps:         
+                 - name: Hello
+                   run: | 
+                     echo 'testing dotnet action'     
+                 - name: .NET code metrics        
+                   id: dotnet-code-metrics         
+                   uses: dotnet/samples/github-actions/DotNet.GitHubAction@main     
+                   env:   
+                      GREETINGS: 'Hello, .NET developers!' 
+                   with:
+                   
+                     owner: mohamed kamil hussain
+                     name: kshf
+                     branch: bsdjd
+                     dir: jsbdjvbd
