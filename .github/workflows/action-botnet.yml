@@ -11,12 +11,9 @@ jobs:
                      echo 'testing dotnet action'     
                  - name: .NET code metrics        
                    id: dotnet-code-metrics         
-                   uses: dotnet/samples/github-actions/DotNet.GitHubAction@main     
+                   uses: kamil467/github_action_dotnet@main     
                    env:   
                       GREETINGS: 'Hello, .NET developers!' 
                    with:
                    
-                     owner: mohamed kamil hussain
-                     name: kshf
-                     branch: bsdjd
-                     dir: jsbdjvbd
+                     owner: 'mohamed kamil hussain'
