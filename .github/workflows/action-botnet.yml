@@ -20,3 +20,6 @@ jobs:
                    with:
                    
                      owner: 'mohamed kamil hussain'
+                 - name: Print Summary
+                   run: |
+                      echo {{steps.dotnet-code-metrics.outputs.summary-details}} >> $GITHUB_SUMMARY
