@@ -8,10 +8,7 @@ jobs:
             steps:         
                  - name: Hello
                    run: | 
-                     echo 'testing dotnet action'
-                 - uses: actions/setup-dotnet@v3
-                   with:
-                      dotnet-version: '7.0.x'
+                      docker builder prune
                  - name: .NET Action Demo       
                    id: dotnet-code-metrics         
                    uses: kamil467/github_action_dotnet@main     
