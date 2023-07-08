@@ -17,6 +17,7 @@ jobs:
                    with:
                    
                      owner: 'mohamed kamil hussain'
+                     release: 'phase1'
                  - name: Print Summary
                    run: |
-                      echo {{steps.dotnet-code-metrics.outputs.summary-details}} >> $GITHUB_SUMMARY
+                      cat release.md >> $GITHUB_SUMMARY
