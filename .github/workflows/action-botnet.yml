@@ -20,4 +20,4 @@ jobs:
                      release: 'phase1'
                  - name: Print Summary
                    run: |
-                      cat release.md >> $GITHUB_SUMMARY
+                      cat release.md >> $GITHUB_STEP_SUMMARY
