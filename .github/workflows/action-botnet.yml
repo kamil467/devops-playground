@@ -16,8 +16,8 @@ jobs:
                       GREETINGS: 'Hello, .NET developers!' 
                    with:
                    
-                     owner: 'mohamed kamil hussain'
-                     release: 'phase1'
+                     owner: 'ABC'
+                     release: 'phase2'
                  - name: Print Summary
                    run: |
                       cat release.md >> $GITHUB_STEP_SUMMARY
