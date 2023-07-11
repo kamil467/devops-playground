@@ -1,4 +1,4 @@
-### Best Pratcies for Branch Management and Devops Practices updated main
+### Best Pratcies for Branch Management and Devops Practices updated main--- update
 
 #### Main Branch Startegy 
  - features and bugs fixes should go as pull request via sperate branhces ( feature branches or topics)
