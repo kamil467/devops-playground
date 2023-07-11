@@ -5,6 +5,9 @@ on:
 jobs:   
      test-job:
             runs-on: ubuntu-latest
+            permissions:
+              contents: read
+              pull-requests: read
             steps:         
                  - name: Hello
                    run: | 
@@ -13,11 +16,9 @@ jobs:
                    id: dotnet-code-metrics         
                    uses: kamil467/github_action_dotnet@main     
                    env:   
-                      GREETINGS: 'Hello, .NET developers!' 
+                      GITHUB_REPO_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                    with:
-                   
-                     owner: 'ABC'
-                     release: 'phase2'
+                      release: 'releasev1.0.1'
                  - name: Print Summary
                    run: |
                       cat release.md >> $GITHUB_STEP_SUMMARY
