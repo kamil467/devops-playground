@@ -11,8 +11,8 @@ jobs:
             steps:         
                  - name: Hello
                    run: | 
-                      echo ${{GITHUB_REPOSITORY}}
-                      echo ${{ GITHUB_REPOSITORY_OWNER}}
+                      echo ${{ env.GITHUB_REPOSITORY }}
+                      echo ${{ env.GITHUB_REPOSITORY_OWNER}}
                  - name: .NET Action Demo       
                    id: dotnet-code-metrics         
                    uses: kamil467/github_action_dotnet@main     
