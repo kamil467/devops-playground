@@ -21,4 +21,4 @@ jobs:
                       release: 'releasev1.0.1'
                  - name: Print Summary
                    run: |
-                      cat release.md >> $GITHUB_STEP_SUMMARY
+                      cat release-summary.md >> $GITHUB_STEP_SUMMARY
