@@ -18,7 +18,7 @@ jobs:
                    env:   
                       GITHUB_REPO_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                    with:
-                      release: 'releasev1.0.1'
+                      release: 'release1.1'
                  - name: Print Summary
                    run: |
                       cat release-summary.md >> $GITHUB_STEP_SUMMARY
