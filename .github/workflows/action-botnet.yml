@@ -15,7 +15,7 @@ jobs:
                       echo ${{ env.GITHUB_REPOSITORY_OWNER}}
                  - name: .NET Action Demo       
                    id: dotnet-code-metrics         
-                   uses: kamil467/github_action_dotnet@main     
+                   uses: kamil467/release-summary-github-action@main     
                    env:   
                       GITHUB_REPO_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                    with:
