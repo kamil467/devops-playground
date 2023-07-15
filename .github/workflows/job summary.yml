@@ -7,30 +7,24 @@ jobs:
       runs-on: ubuntu-latest
       steps:
            - name: Print Summary
-             run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
-             
-           - name: Install Newman
-             run: npm install -g newman
-           - name: Install HTML report
-             run:  npm install -g newman-reporter-html
-           - name: Run newman
-             run: |
-                 newman run https://api.postman.com/collections/13985100-5b6aa617-8431-4d2d-ba50-b8ca11cf92ea?access_key=PMAT-01H2X6JG51DDK6YAE5AKC0GBV3  --reporters cli,html  --reporter-html-export report.html
-                  
-           - name: Upload Report
-             if: ${{ always() }}
-             uses: actions/upload-artifact@v3.1.2
-             with:
-               path: report
-               
-           - name: Print report in Job summary
-             if: ${{always()}}
-             run: cat report.html >> $GITHUB_STEP_SUMMARY
-   
-           
-   job_2:
-     runs-on: ubuntu-latest
-     environment: Test
-     steps:
-         - name: Print Summary - Job 2
-           run: echo '### Second Job Summary 🚀' >> $GITHUB_STEP_SUMMARY
+             run: | 
+                echo 
+                <table>
+                <tr>
+                <th>Company</th>
+                <th>Contact</th> 
+                <th>Country</th>
+                </tr>
+                <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td> 
+                <td>Germany</td>
+                </tr>
+                <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td> 
+                <td>Mexico</td>
+                </tr>
+                </table>
+                       >> $GITHUB_STEP_SUMMARY
+ 
